@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ankit Jasrotia — First Webpage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#0ea5a4;
+      --dark:#0f172a;
+      --muted:#6b7280;
+      --card:#f8fafc;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#fbfdfe 0%, #f3f7f8 100%);color:var(--dark);line-height:1.5}
+    .container{max-width:980px;margin:28px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted)}
+    nav a{margin-left:12px;color:var(--muted);text-decoration:none;font-weight:600}
+    main{margin-top:22px;display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:880px){main{grid-template-columns:1fr 360px}}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+
+    /* About */
+    .about h2,.resume h2{margin-top:0}
+    .contact{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{background:white;padding:8px 10px;border-radius:999px;border:1px solid #e6eef2;font-size:14px;color:var(--dark)}
+
+    /* Resume list */
+    .section-title{display:flex;align-items:center;gap:12px}
+    .section-title h3{margin:0}
+    .job{margin-bottom:12px}
+    .job h4{margin:4px 0}
+    .muted{color:var(--muted);font-size:13px}
+    ul.bullets{padding-left:20px}
+
+    /* Right column */
+    .profile-card{position:sticky;top:24px}
+    .skills{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+    .skill{background:#fff;padding:10px;border-radius:8px;border:1px solid #eef6f7;font-size:14px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:30px}
+
+    /* Action buttons */
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{border:1px solid #e6eef2;background:white;color:var(--dark)}
+
+    pre.resume-text{white-space:pre-wrap;font-family:inherit;background:transparent;border-left:3px solid #e6eef2;padding-left:12px;color:var(--dark)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AJ</div>
+        <div>
+          <h1>Ankit Jasrotia</h1>
+          <p class="lead">IT Support • Networking • System Administration — Toronto, Canada</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="card about" id="about">
+        <h2>About</h2>
+        <p>Detail-oriented and technically competent IT professional experienced in technical support, networking, and system administration. Skilled at troubleshooting, documentation, and customer service. Certified in CompTIA A+ and Google IT Support. Known for adaptability, strong analytical thinking, and a collaborative approach to solving complex problems in dynamic, fast-paced environments.</p>
+
+        <div class="contact">
+          <div class="chip">📍 Toronto, Canada</div>
+          <div class="chip">✉️ ankitjasrotia91@gmail.com</div>
+          <div class="chip">📱 647-563-2040</div>
+          <div class="chip">🔗 <a href="https://www.linkedin.com/in/ankitjasrotia" target="_blank">linkedin.com/in/ankitjasrotia</a></div>
+        </div>
+
+        <hr style="margin:16px 0;border:none;border-top:1px solid #eef6f7">
+
+        <h3>Highlights</h3>
+        <ul>
+          <li>CompTIA A+ certified & Google IT Support Professional.</li>
+          <li>Hands-on networking experience: TCP/IP, DNS, DHCP, OSPF, EIGRP, RIP, BGP.</li>
+          <li>Experienced with VMware, Cisco Packet Tracer, Wireshark, and common admin tools.</li>
+        </ul>
+
+        <div style="margin-top:14px">
+          <a class="btn btn-primary" href="#resume">View Resume</a>
+          <a class="btn btn-ghost" href="mailto:ankitjasrotia91@gmail.com">Email</a>
+        </div>
+      </section>
+
+      <aside class="card profile-card">
+        <h3>Technical Skills</h3>
+        <div class="skills" style="margin-top:10px">
+          <div class="skill"><strong>Networking</strong><br><small class="muted">TCP/IP, DNS, DHCP, BGP, OSPF</small></div>
+          <div class="skill"><strong>Tools</strong><br><small class="muted">Wireshark, Packet Tracer, PuTTY</small></div>
+          <div class="skill"><strong>Cloud / Virtualization</strong><br><small class="muted">VMware, Microsoft Azure</small></div>
+          <div class="skill"><strong>OS</strong><br><small class="muted">Windows, macOS, Linux (Red Hat, Debian)</small></div>
+          <div class="skill"><strong>Languages</strong><br><small class="muted">HTML, SQL</small></div>
+          <div class="skill"><strong>Office</strong><br><small class="muted">Microsoft O365</small></div>
+        </div>
+
+        <h3 style="margin-top:16px">Soft Skills</h3>
+        <p class="muted">Adaptability · Analytical Thinking · Team Collaboration · Customer-Centric · Attention to Detail</p>
+      </aside>
+
+      <section class="card resume" id="resume">
+        <div class="section-title"><h2>Resume</h2></div>
+
+        <pre class="resume-text">ANKIT JASROTIA
+TORONTO, CANADA
+E: ankitjasrotia91@gmail.com  ||  M: 6475632040  ||  LinkedIn: www.linkedin.com/in/ankitjasrotia
+
+PROFILE SUMMARY
+Detail-oriented and technically competent IT professional; experienced in technical support, networking, and system administration. Skilled in troubleshooting, documentation, and customer service. Certified in CompTIA A+ and Google IT Support. Known for adaptability, strong analytical thinking, and a collaborative approach to solving complex problems in dynamic, fast-paced environments.
+
+TECHNICAL SKILLS
+Computer Networking
+Networking Protocols: TCP/IP, UDP, DNS, SNMP, DHCP, IEEE Standards, BGP
+Routing Protocols and Techniques: RIP, EIGRP, OSPF
+Cloud and Virtualization: VMware
+Networking Tools: Cisco Packet Tracer, Wireshark, PuTTY, and tcpdump
+Languages
+Web Development: HTML
+Database Management: SQL
+
+Operating Systems: Windows, macOS, Linux - Distributions: Red Hat and Debian
+Tools: Microsoft O365, Microsoft Azure
+
+PROFESSIONAL EXPERIENCE
+Technical Help Desk Specialist  (07/2019-09/2020)  — InfoWiz, India
+• Designed and implemented network security protocols (firewalls, VPNs, IDS/IPS), reducing unauthorized access incidents.
+• Provided Tier 2+ troubleshooting for routers, switches, and firewalls, resolving 95% of tickets without escalation.
+• Managed end-to-end network infrastructure processes including purchasing, shipping, installation, and maintenance of LAN/MAN/WAN systems, offering on-site and on-call support for seamless network operations.
+• Triaged and resolved IT support tickets and escalated complex issues to team members, leveraging strong written communication to enhance user experience and provide quality technical support.
+
+Technical Support Specialist  (10/2020-04/2022) — Samrat Traders, India
+• Diagnosed and resolved Tier 1-2 hardware, software, and network issues in a fast-paced environment, optimized system functionality and improved uptime by 99%.
+• Created comprehensive documentation for system migrations and maintained technical documentation in excel sheets for process development, ensuring operational continuity and regulatory compliance.
+• Deployed and imaged PCs and laptops with proficiency in deployment software, providing both remote and onsite problem-solving for devices running iOS and Windows.
+• Handled technical problem intake through ServiceNow, JIRA, email, and phone for urgent incidents, proactively improving support processes to boost customer satisfaction and operational efficiency.
+
+Supervisor (Security Operations)  (10/2021-Present) — Logixx Security Inc.
+• Supervised and coordinated daily operations of security personnel, ensuring adherence to company policies, safety protocols, and client requirements while ensuring presentable teamwork.
+
+EDUCATION & CERTIFICATIONS
+Bachelors in Computer Applications  (2016-2019) — University of Jammu, India
+CompTIA A+ (220-1101 and 1102)
+Google IT Support Professional
+
+SOFT SKILLS
+Adaptability | Analytical Thinking | Team Collaboration | Customer-Centric Approach | Attention to Detail
+</pre>
+
+      </section>
+
+    </main>
+
+    <footer id="contact">
+      <div style="max-width:720px;margin:0 auto">© <strong>Ankit Jasrotia</strong> — Built with care. Email: <a href="mailto:ankitjasrotia91@gmail.com">ankitjasrotia91@gmail.com</a></div>
+    </footer>
+  </div>
+
+  <!-- Small interactive script: smooth scroll for nav links -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        e.preventDefault();
+        const target=document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    })
+  </script>
+</body>
+</html>
